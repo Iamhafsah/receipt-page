@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your receipt</title>
+    <link rel="stylesheet" href="receipt-style.css">
+    <script defer src="receipt.js"></script>
+</head>
+<body class="receipt-body">
+    <main class="receipt-wrapper">
+        <h1 class="main-h1">Prepare your receipt.</h1>
+        <div id="container">
+
+        <!-- The receipt details section -->
+        <section id="section-1">
+        <h2>RECEIPT DETAILS</h2>
+        <form class="receipt-form" id="form" action="">
+            <label for="name">Business Name</label> <br>
+            <input type="text" id="biz-name" name="biz-name" required> <br>
+            <label for="name">Customer Name</label> <br>
+            <input type="text" id="name" name="name" required> <br>
+            <label for="address">Customer Address</label> <br>
+            <input type="text" id="address" name="address" required> <br>
+            <label for="city">City / State</label> <br>
+            <input type="text" id="city" name="city" required> <br>
+            <label for="number">Business Contact Number</label> <br>
+            <input type="tel" id="number" name="number" required> <br>
+            <label for="date">Date</label> <br>
+            <input type="date" id="date" name="date" required> <br>
+            
+            <div id="flex-forms">
+            <div>
+            <p>
+            <label for="item" id="label-name">Item Name</label> <br>
+            <input type="text" class="item item-spec" name="item" required> <br>
+            </p>
+            <p>
+            <label for="price" id="label-price">Price</label> <br>
+            <input type="number" min="0" class="price item-spec" name="price" required> <br>
+            </p>
+            <p>
+            <label for="quantity" id="label-qty">Item Qty</label> <br>
+            <input type="number" min="0" class="quantity item-spec" name="quantity" required> <br>
+            </p>
+            </div>
+            </div>
+             <p id="add-items">click here to add more items</p>
+            <label for="comment">Comment</label> <br>
+            <input type="text" id="comment-input" name="comment" required> <br> <br>
+            <input type="submit" value="Create Receipt" id="submit" class="submit ">
+        </form>
+    </section>
+    <!-- The receipt section -->
+    <section id="section-2">
+       <div class="receipt">
+           <h3 class="business-name">Business Name</h3>
+           <p>Customer Name</p>
+           <p>Customer Address</p>
+           <p>City or State</p>
+           <p>080000000</p>
+           <p>06/21/20</p>
+           <h3>RECEIPT</h3>
+           <div class="item-info">
+               <div>
+                   <h5>Item Name</h5>
+                   <p>Item 1</p>
+                   <p>Item 2</p>
+                   <p>Item 3</p>
+                </div>
+                <div>
+                    <h5>Item Qty</h5>
+                    <p>Qty</p>
+                    <p>Qty</p>
+                    <p>Qty</p>
+                 </div>
+                 <div>
+                    <h5>Item Price</h5>
+                    <p>Price</p>
+                    <p>Price</p>
+                    <p>Price</p>
+                 </div>
+                 
+           </div>
+           <p class="items-count">Items Count:</p>
+           <p class="subtotal">Subtotal:</p>
+           <p class="vat">VAT(7.5%): #</p>
+           <p class="total">Total #:</p>
+           <p class="comment">Leave a comment.</p>
+       </div>
+       <button>DOWNLOAD RECEIPT</button> <br>
+       <form action="">
+       <p class="email-label">Receive receipt in your e-mail?</p>
+       <input type="email" name="customer-email" class="receipt-form" id="customer-email" placeholder="enter your email" required> <br>
+       <input type="submit" value="Send to mail" class="send-mail">
+       </form>
+    </section>
+</div>
+    </main>
+</body>
+</html>
